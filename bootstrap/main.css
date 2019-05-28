@@ -1,0 +1,131 @@
+body{
+  background-color: #909ea8;
+  text-align: left;
+}
+
+body button:hover{
+
+}
+
+FIELDSET {
+    margin: 8px;
+    border: 2px solid black;
+    border-top: 2px solid black;
+    padding: 8px;
+    padding-bottom: 40px;
+    border-radius: 4px;
+    background-color: #A1B0BB;
+    width: 75vw;
+}
+LEGEND{
+    padding: 2px;
+    color: black;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: left;
+}
+
+.TitleBox{
+  /*Patrician top nav bar color #c65656*/
+  background-color: #2E79B0;
+  height: auto;
+  padding-bottom: 5px;
+}
+
+.MainTitleText{
+  padding-top: 2%;
+  font-size: 300%;
+  font-style: italic;
+  color: white;
+}
+
+.TableColumnTitle{
+  font-weight: bold;
+  color: black;
+  font-size: 110%;
+  text-align: left;
+}
+
+.manualTimeInputButton{
+  font-weight: bold;
+  width: auto;
+}
+
+.mainControlPanel{
+
+}
+
+.ItemContainer{
+  text-align: left;
+  padding-left: 1px;
+  padding-right: 1px;
+  width: 60vw;
+}
+
+.tempControlText{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.TemperatureControlGridRow{
+  border-color: #000000;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-width: thin;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: auto;
+  align-items: center;
+  height: auto;
+}
+
+.ControlItemTitleBox{
+  /*padding-top: 5px;*/
+  padding-bottom: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: auto;
+  align-items: center;
+  height: auto;
+}
+
+/*Main Control units styling format*/
+.ControlItemBox{
+  border-color: #000000;
+  border-style: ridge;
+  border-width: thin;
+  box-shadow: 3px 3px #000000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: auto;
+  align-items: center;
+  height: auto;
+}
+
+
+/*Control Item Boxes activation states*/
+.ControlItemBoxDeactivated{
+  background-color: #d6d8d9;
+  color: black;
+}
+
+.ControlItemBoxActivated{
+  background-color: #06D2D8;
+  color: white;
+}
+
+.ControlItemBoxUnresponsive{
+  background-color: #F91103;
+  color: white;
+}
+
+.ControlItemLight{
+  background-color: #d6d8d9;
+  color: black;
+}
+.ControlItemDark{
+  background-color: #B5B5B5;
+  color: black;
+}
