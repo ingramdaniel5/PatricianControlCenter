@@ -35,9 +35,9 @@ class acZoneStatus
       echo "<div class=\"row TemperatureControlGridRow ControlItemLight\">";
     }
     echo "<h4 class=\"col tempControlText\" id=\"".$this->ZoneID."LocationLabel\">".$this->Name."</h4>";
-    echo "<h4 class=\"col tempControlText\" id=\"".$this->ZoneID."CurrentTempLabel\">".$this->TempCurrent." deg</h4>";
-    echo "<h4 class=\"col tempControlText\" id=\"".$this->ZoneID."VentTempLabel\">".$this->TempCurrent." deg</h4>";
-    echo "<h4 class=\"col tempControlText\" id=\"".$this->ZoneID."OccupiedLabel\">Unoccupied</h4>";
+    echo "<h4 class=\"col tempControlText\" id=\"".$this->ZoneID."CurrentTempLabel\">".$this->TempCurrent."</h4>";
+    echo "<h4 class=\"col tempControlText\" id=\"".$this->ZoneID."VentTempLabel\">".$this->TempCurrent."</h4>";
+    echo "<button class=\"col btn btn-outline-primary occupiedButton\" type=\"button\">Unoccupied</button>";
     echo "<div class=\"input-group col\" id=\"".$this->ZoneID."SetTempFormGroup\">";
     echo "<input type=\"number\" class=\"form-control\">";
     echo "<div class=\"input-group-append\" id=\"button-addon4\">";
@@ -69,14 +69,14 @@ function printAllZonesToUI($zonesList)
 function generateListOfZones()
 {
   $toReturn = array();
-  array_push($toReturn, new acZoneStatus("Lobby Bathroom", "Bathroom", "70.0", "70.0", "1", 1, 1));
-  array_push($toReturn, new acZoneStatus("North Zone", "NorthZone", "70.0", "70.0", "2", 1, 1));
-  array_push($toReturn, new acZoneStatus("Center Zone", "CenterZone", "70.0", "70.0", "3", 1, 1));
-  array_push($toReturn, new acZoneStatus("Middle East Zone", "MiddleEastZone", "70.0", "70.0", "4", 1, 1));
-  array_push($toReturn, new acZoneStatus("Middle West Zone", "MiddleWestZone", "70.0", "70.0", "5", 1, 1));
-  array_push($toReturn, new acZoneStatus("South East Zone", "SouthEastZone", "70.0", "70.0", "6", 1, 1));
-  array_push($toReturn, new acZoneStatus("South West Zone", "SouthWestZone", "70.0", "70.0", "7", 1, 1));
-  array_push($toReturn, new acZoneStatus("Front Office", "FrontOffice", "70.0", "70.0", "8", 1, 1));
+  array_push($toReturn, new acZoneStatus("Lobby Bathroom", "Bathroom", "UNKNOWN", "UNKNOWN", "1", 1, 1));
+  array_push($toReturn, new acZoneStatus("North Zone", "NorthZone", "UNKNOWN", "UNKNOWN", "2", 1, 1));
+  array_push($toReturn, new acZoneStatus("Center Zone", "CenterZone", "UNKNOWN", "UNKNOWN", "3", 1, 1));
+  array_push($toReturn, new acZoneStatus("Middle East Zone", "MiddleEastZone", "UNKNOWN", "UNKNOWN", "4", 1, 1));
+  array_push($toReturn, new acZoneStatus("Middle West Zone", "MiddleWestZone", "UNKNOWN", "UNKNOWN", "5", 1, 1));
+  array_push($toReturn, new acZoneStatus("South East Zone", "SouthEastZone", "UNKNOWN", "UNKNOWN", "6", 1, 1));
+  array_push($toReturn, new acZoneStatus("South West Zone", "SouthWestZone", "UNKNOWN", "UNKNOWN", "7", 1, 1));
+  array_push($toReturn, new acZoneStatus("Front Office", "FrontOffice", "UNKNOWN", "UNKNOWN", "8", 1, 1));
   return $toReturn;
 }
 

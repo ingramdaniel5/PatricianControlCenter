@@ -44,6 +44,9 @@
                 $exisitingZones = generateListOfZones();
                 printAllZonesToUI($exisitingZones);
               ?>
+            </br>
+              <button type="button" class="btn btn-primary btn-lg btn-block AC-Control-Buttons" id="btnZoneTempRefresh">Refresh</button>
+              <button type="button" class="btn btn-success btn-lg btn-block AC-Control-Buttons" id="btnZoneTempUpdate">Submit</button>
             </div>
           </fieldset>
 
@@ -58,12 +61,12 @@
               </div>
               <div class="TemperatureControlGridRow ControlItemBoxDeactivated row">
                 <h4 class="col">Walkin Refrigerator:</h4>
-                <h4 class="col" id="WalkinFridgeTempLabel">20.0 deg</h4>
+                <h4 class="col" id="WalkinFridgeTempLabel">UNKNOWN</h4>
               </div>
               </br>
               <div class="TemperatureControlGridRow ControlItemBoxDeactivated row">
                 <h4 class="col">Walkin Freezer:</h4>
-                <h4 class="col" id="WalkinFreezerTempLabel">-4.0 deg</h4>
+                <h4 class="col" id="WalkinFreezerTempLabel">UNKNOWN</h4>
               </div>
             </div>
           </fieldset>
@@ -74,21 +77,16 @@
             <!-- Outside Lights Control Panel Portion -->
             <div id="OutsideLightsClockContainer" class="container ItemContainer">
               <div class="row ControlItemTitleBox">
-                <p class="col TableColumnTitle">Clock Location</p>
-                <p class="col TableColumnTitle">Current Activation Times</p>
-                <p class="col TableColumnTitle">Manual Override</p>
+                <center>
+                  <p class="col TableColumnTitle">Current Activation Times</p>
+                </center>
               </div>
               <div class="ControlItemBox ControlItemBoxDeactivated row">
-                <h4 class="col">North Outside Lights:</h4>
-                <h4 class="col" id="NorthRoomCurrentTimeLabel">7:45pm - 6:30am</h4>
-                <button class="btn btn-sm btn-warning col manualTimeInputButton" type="button">Override</button>
+                <center>
+                  <h4 class="col" id="NorthRoomCurrentTimeLabel">UNKNOWN</h4>
+                </center>
               </div>
                 </br>
-              <div class="ControlItemBox ControlItemBoxDeactivated row">
-                <h4 class="col">South Outside Lights:</h4>
-                <h4 class="col" id="SouthRoomCurrentTimeLabel">7:45pm - 6:30am</h4>
-                <button  class="btn btn-sm btn-warning col manualTimeInputButton" type="button">Override</button>
-              </div>
             </div>
           </fieldset>
         </center>

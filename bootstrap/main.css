@@ -14,7 +14,7 @@ FIELDSET {
     padding: 8px;
     padding-bottom: 40px;
     border-radius: 4px;
-    background-color: #A1B0BB;
+    background-color: #cedbef;
     width: 75vw;
 }
 LEGEND{
@@ -55,6 +55,31 @@ LEGEND{
 
 }
 
+.AC-Control-Buttons{
+  width: 60vw;
+  box-shadow: 3px 3px #000000;
+  border-color: #000000;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-width: thin;
+}
+
+.AC-Control-Buttons:hover{
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.occupiedButton
+{
+  align-self: left;
+}
+
+.occupiedButton:hover
+{
+
+}
+
+
 .ItemContainer{
   text-align: left;
   padding-left: 1px;
@@ -68,6 +93,7 @@ LEGEND{
 }
 
 .TemperatureControlGridRow{
+  box-shadow: 3px 3px #000000;
   border-color: #000000;
   border-bottom-style: solid;
   border-top-style: solid;
