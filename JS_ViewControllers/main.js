@@ -1,4 +1,5 @@
-var remoteServerURLs = ["http://localhost/PatricianSouthRoom/","http://localhost/PatricianNorthRoom/"];
+//var remoteServerURLs = ["http://localhost/PatricianSouthRoom/","http://localhost/PatricianNorthRoom/"];
+var remoteServerURLs = ["http://SouthRoomPI","http://NorthRoomPI"];
 
 $(document).ready(function() {
   $().ready(function() {
@@ -16,6 +17,7 @@ function GetTimeUpdatePostRequestSettings(url)
     "url": url,
     "method": "POST",
     "timeout": 0,
+    "crossDomain" : true,
     "headers": {
       "Content-Type": "application/x-www-form-urlencoded"
     },
@@ -33,6 +35,7 @@ function GetCurrrentPiTimePostRequestSettings(url)
     "url": url,
     "method": "POST",
     "timeout": 0,
+    "crossDomain" : true,
     "headers": {
       "Content-Type": "application/x-www-form-urlencoded"
     },
@@ -50,6 +53,7 @@ function PingPi(url)
     "url": url,
     "method": "POST",
     "timeout": 0,
+    "crossDomain" : true,
     "headers": {
       "Content-Type": "application/x-www-form-urlencoded"
     },
@@ -67,7 +71,10 @@ function GetExternalLightsPIsSettingsAndUpdateUI() {
   {
     var currentSettings =  GetCurrrentPiTimePostRequestSettings(remoteServerURLs[x]);
     $.ajax(currentSettings).done(function (response) {
-      console.log("Remote Server Current Settings Query Response: " + response);
+      formattedResponse = JSON.parse(response);
+      console.log("Remote Server Current Settings Query Response: " + formattedResponse.TimeOn + " " +  formattedResponse.TimeOff );
+      document.getElementById('TimeOffCurrentSetting').innerHTML = formattedResponse.TimeOff;
+      document.getElementById('TimeOnCurrentSetting').innerHTML = formattedResponse.TimeOn;
     });
   }
 }
@@ -87,6 +94,10 @@ function PingRemotePisAndUpdateUI() {
       else if (response == "SouthRoomPi")
       {
         document.getElementById('SouthRoomPiStatus').innerHTML = "Online";
+      }
+      else
+      {
+        console.log("ERROR! Remote resource connection attempt failed!");
       }
     });
   }

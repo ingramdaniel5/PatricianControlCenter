@@ -11,6 +11,13 @@ Coded by Creative Tim
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    date_default_timezone_set("America/New_York");
+    header("Access-Control-Allow-Origin: *");
+?>
 
 <head>
   <meta charset="utf-8" />
@@ -161,11 +168,11 @@ The above copyright notice and this permission notice shall be included in all c
                   <p class="card-title">Outside Lights Settings</p>
                   <div class="col-lg-6 col-md-11">
                     <h2 class="card-title">On at: </h2> 
-                    <h3 class="card-title">N/A</h3>
+                    <h3 id="TimeOnCurrentSetting"class="card-title">N/A</h3>
                   </div>
                   <div class="col-lg-6 col-md-11">
                     <h2 class="card-title">Off at: </h2>
-                    <h3 class="card-title">N/A</h3>
+                    <h3 id="TimeOffCurrentSetting" class="card-title">N/A</h3>
                   </div>
                 </div>
                 <div class="card-footer">
