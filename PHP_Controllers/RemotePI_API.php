@@ -15,7 +15,7 @@ class RemotePiAPI{
 
   }
 
-  public static function getRemotePIsTimeSetting(){
+  public static function getRemoteAPIsTimeSetting(){
     $responses = array();
     for ($x=0; $x<count(RemotePiAPI::$RemoteAPI_URLs);  $x++)
     {
@@ -34,6 +34,7 @@ class RemotePiAPI{
   //{"TimeOn":"2020-05-15 06:41:15pm","TimeOff":"2020-05-15 09:41:15pm"}
   public static function POST_REQ($URL, $ObjectKey, $ObjectValue)
   {
+    /*
     $request = new HTTP_Request2();
     $request->setUrl($URL);
     $request->setMethod(HTTP_Request2::METHOD_POST);
@@ -58,7 +59,7 @@ class RemotePiAPI{
     }
     catch(HTTP_Request2_Exception $e) {
       return 'Error: ' . $e->getMessage();
-    }
+    }*/
   }
 
 }
